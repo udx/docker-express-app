@@ -1,7 +1,11 @@
 FROM andypotanin/express:latest
 
-WORKDIR /root
+COPY app /root/express-server
+WORKDIR /root/express-server
 
-EXPOSE 8080
+RUN npm install
+ENTRYPOINT ["/root/express-server/bin/startServer"]
 
-CMD pm2 logs
+EXPOSE 80
+
+CMD ["/bin/bash"]

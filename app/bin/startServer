@@ -1,0 +1,9 @@
+#!/bin/sh
+
+cd /root/express-server
+
+npm start
+
+## Pipe/Follow-through other commands.
+exec "$@"
+
