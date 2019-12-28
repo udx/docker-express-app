@@ -8,4 +8,4 @@ ENTRYPOINT ["/root/express-server/bin/startServer"]
 
 EXPOSE 80
 
-CMD ["/bin/bash"]
+CMD ["pm2", "logs"]

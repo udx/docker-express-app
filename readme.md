@@ -13,9 +13,18 @@ docker run -it  --rm rabbitci.azurecr.io/udx-docker-express-app:0.0.5
 
 Run as service:
 ``` 
-docker run -itd \
+docker run -d \
   --publish=80 \
   --name=express.$(hostname) \
+  --restart=always \
+  rabbitci.azurecr.io/udx-docker-express-app:0.0.5
+```
+
+Run as service:
+``` 
+docker run -d \
+  --publish=80 \
+  --name=express.k8.$(hostname) \
   --restart=always \
   udx/docker-express-app
 ```
