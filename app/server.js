@@ -13,9 +13,21 @@ if( process.argv[2] ) {
 }
 
 //console.log( process.argv );
+app.use(function(req,res,next){
+  res.set('Server', process.env.HOSTNAME || 'unknown' );
+  next();
+});
 
 app.get( '/healthz', function( req, res ) {
   res.send( {ok:true,message: "health up",env: process.env.NODE_ENV });
+});
+
+app.get( '/api/health/ready', function( req, res ) {
+  res.send( {ok:true,message: "health ready",env: process.env.NODE_ENV });
+});
+
+app.get( '/api/health/live', function( req, res ) {
+  res.send( {ok:true,message: "health live",env: process.env.NODE_ENV });
 });
 
 app.get( '/api/env', function( req, res ) {
