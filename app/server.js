@@ -18,6 +18,10 @@ app.get( '/healthz', function( req, res ) {
   res.send( {ok:true,message: "health up",env: process.env.NODE_ENV });
 });
 
+app.get( '/api/env', function( req, res ) {
+  res.send( process.env );
+});
+
 app.use(serveStatic( _static, {'index': ['index.html', 'default.htm']}));
 
 app.use( function( req, res ) {
