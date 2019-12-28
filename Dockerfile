@@ -1,6 +1,7 @@
 FROM andypotanin/express:latest
 
-WORKDIR /root/express-server
-ENTRYPOINT /usr/local/bin/startServer
+WORKDIR /root
 
-CMD /bin/bash
+EXPOSE 8080
+
+CMD pm2 logs
