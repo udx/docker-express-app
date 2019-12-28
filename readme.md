@@ -8,7 +8,7 @@ docker build . --tag udx/docker-express-app
 Run for testing:
 ```
 docker run -it  --rm udx/docker-express-app 
-docker run -it -v /Users/andy/Documents/GitHub/blackboard/udx/docker-express-app/share:/root/express-server/share --rm udx/docker-express-app /bin/bash
+docker run -it  --rm rabbitci.azurecr.io/udx-docker-express-app:0.0.5
 ```
 
 Run as service:
