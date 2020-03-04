@@ -14,11 +14,16 @@ if( process.argv[2] ) {
 
 //console.log( process.argv );
 app.use(function(req,res,next){
+  console.log('req', req.originalUrl, JSON.stringify(req.headers) );
   res.set('Server', process.env.HOSTNAME || 'unknown' );
   next();
 });
 
 app.get( '/healthz', function( req, res ) {
+  res.send( {ok:true,message: "health up",env: process.env.NODE_ENV });
+});
+
+app.get( '/actuator/health', function( req, res ) {
   res.send( {ok:true,message: "health up",env: process.env.NODE_ENV });
 });
 

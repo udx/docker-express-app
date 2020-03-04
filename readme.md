@@ -36,6 +36,8 @@ docker tag udx/docker-express-app rabbitci.azurecr.io/udx-docker-express-app:0.0
 docker tag udx/docker-express-app rabbitci.azurecr.io/udx-docker-express-app:0.0.3
 docker tag udx/docker-express-app rabbitci.azurecr.io/udx-docker-express-app:0.0.4
 docker tag udx/docker-express-app rabbitci.azurecr.io/udx-docker-express-app:0.0.5
+docker tag udx/docker-express-app rabbitci.azurecr.io/udx-docker-express-app:0.0.6
+docker tag udx/docker-express-app rabbitci.azurecr.io/udx-docker-express-app:0.0.7
 ```
 
 Push to ACR (for demo purposes):
@@ -45,4 +47,6 @@ docker push rabbitci.azurecr.io/udx-docker-express-app:0.0.2
 docker push rabbitci.azurecr.io/udx-docker-express-app:0.0.3
 docker push rabbitci.azurecr.io/udx-docker-express-app:0.0.4
 docker push rabbitci.azurecr.io/udx-docker-express-app:0.0.5
+docker push rabbitci.azurecr.io/udx-docker-express-app:0.0.6
+docker push rabbitci.azurecr.io/udx-docker-express-app:0.0.7
 ```
