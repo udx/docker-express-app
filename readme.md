@@ -2,7 +2,7 @@ Makes running https://hub.docker.com/repository/docker/andypotanin/express easie
 
 Build locally:
 ```
-docker build . --tag udx/docker-express-app
+docker build . --tag udx/docker-express-app:dev
 ```
 
 Run for testing:
@@ -49,4 +49,12 @@ docker push rabbitci.azurecr.io/udx-docker-express-app:0.0.4
 docker push rabbitci.azurecr.io/udx-docker-express-app:0.0.5
 docker push rabbitci.azurecr.io/udx-docker-express-app:0.0.6
 docker push rabbitci.azurecr.io/udx-docker-express-app:0.0.7
+```
+
+### Kubernetes
+```
+curl https://${KUBERNETES_PORT_443_TCP_ADDR}:443/api/ --header "Authorization: Bearer $(cat token)" -k
+curl https://${KUBERNETES_PORT_443_TCP_ADDR}:443/api/v1/namespaces/default/pods/${HOSTNAME} --header "Authorization: Bearer $(cat /var/run/secrets/kubernetes.io/serviceaccount/token)" -k
+curl https://${KUBERNETES_PORT_443_TCP_ADDR}:443/api/v1/namespaces/default/configmaps --header "Authorization: Bearer $(cat /var/run/secrets/kubernetes.io/serviceaccount/token)" -k
+curl https://${KUBERNETES_PORT_443_TCP_ADDR}:443/api/v1/namespaces/default/configmaps/ts-sv-api-merchant --header "Authorization: Bearer $(cat /var/run/secrets/kubernetes.io/serviceaccount/token)" -k
 ```

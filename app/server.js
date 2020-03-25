@@ -45,6 +45,6 @@ app.use( function( req, res ) {
   res.send( 'Sample express server here.' );
 });
 
-app.listen( process.env.PORT || 80, process.env.HOST || '0.0.0.0', function() {
+app.listen( process.env.NODE_PORT || 80, process.env.HOST || '0.0.0.0', function() {
   console.log( 'Express server online. Using [%s] static directory.', _static, this.address() );
 });

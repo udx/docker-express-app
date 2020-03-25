@@ -1,0 +1,39 @@
+CosmoDBCollections:
+  account:
+    PartionKeyPath: "/id"
+    Throughput: 400
+    DatabaseName: Institution
+  accountholder:
+    PartionKeyPath: "/id"
+    Throughput: 400
+    DatabaseName: Institution
+  accounttype:
+    PartionKeyPath: "/id"
+    Throughput: 400
+    DatabaseName: Institution
+  institution:
+    PartionKeyPath: "/id"
+    Throughput: 400
+    DatabaseName: Institution
+  limit:
+    PartionKeyPath: "/id"
+    Throughput: 400
+    DatabaseName: Institution
+  limitmap:
+    PartionKeyPath: "/id"
+    Throughput: 400
+    DatabaseName: Institution
+  tenderrule:
+    PartionKeyPath: "/id"
+    Throughput: 400
+    DatabaseName: Institution
+    
+ServiceBusSubscriptions:
+  CreateAccountHolderSubscription:
+    SubscriptionName: "createaccountholder"
+    TopicName: accountholder
+    MaxDeliveryCount: 15
+  UpdateAccountHolderSubscription:
+    SubscriptionName: "updateaccountholder"
+    TopicName: accountholder
+    MaxDeliveryCount: 15
