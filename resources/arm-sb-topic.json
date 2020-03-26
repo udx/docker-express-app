@@ -4,7 +4,6 @@
   "parameters": {
     "Resource.ServiceBus.Name": {
       "type": "string",
-      "defaultValue": "#{}",
       "metadata": {
         "description": "Name of the Service Bus namespace"
       }
@@ -44,9 +43,5 @@
     }
   ],
   "outputs": {
-    "ResourceId": {
-      "type": "string",
-      "value": ""
-    }
   }
 }
